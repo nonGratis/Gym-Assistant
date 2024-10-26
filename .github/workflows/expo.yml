@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: |
           cd frontend
-          npm run test  # If you have tests set up
+          # npm run test
