@@ -15,5 +15,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm install
-      - run: npm run test  # If you have tests set up
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+      - name: Run tests
+        run: |
+          cd frontend
+          npm run test  # If you have tests set up
