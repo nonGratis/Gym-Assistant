@@ -40,30 +40,35 @@ export default function TrackerScreen() {
   const goalList = [
     {
       title: "Goal",
-      count: 1234,
+      count: 20,
+      type: "plank",
+    },
+    {
+      title: "Goal",
+      count: 11,
       type: "push-up",
     },
     {
       title: "Goal",
-      count: 1234,
-      type: "push-up",
-    },
-    {
-      title: "Goal",
-      count: 1234,
-      type: "push-up",
+      count: 13,
+      type: "squat",
     },
   ];
 
   const [goals, setGoals] = useState(goalList);
 
   const handleAddGoal = () => {
+    const sportTypes = ["push-up", "pull-up", "squat", "jump-rope"];
+
+    const randomType =
+      sportTypes[Math.floor(Math.random() * sportTypes.length)];
+    const randomCount = Math.floor(Math.random() * 199) + 1;
     setGoals((prev) => [
       ...prev,
       {
         title: "Goal",
-        count: 1234,
-        type: "push-up",
+        count: randomCount,
+        type: randomType,
       },
     ]);
   };
@@ -107,7 +112,11 @@ export default function TrackerScreen() {
             handleAddGoal();
           }}
           color={Colors.default.text}
-          style={{ borderRadius: 10 }}
+          style={{
+            padding: 8,
+            borderRadius: 15,
+          }}
+          size={34}
         />
       </View>
     </Fragment>

@@ -1,4 +1,4 @@
-import { Pressable, View } from "react-native";
+import { Pressable, View, TouchableOpacity } from "react-native";
 import { PropsWithChildren } from "react";
 type Props = PropsWithChildren<{
   onPress: () => void;
@@ -12,11 +12,11 @@ export const Button = ({
   backgroundColor,
 }: Props) => {
   return (
-    <Pressable
+    <TouchableOpacity
       onPress={onPress}
       style={[{ backgroundColor: backgroundColor, padding: 5 }, style]}
     >
       {children}
-    </Pressable>
+    </TouchableOpacity>
   );
 };

@@ -20,7 +20,7 @@ export const Screen = ({ children, header, scrollable = true }: Props) => {
   }
 
   return (
-    <View style={{ flex: 1, marginTop: 20 }}>
+    <View style={{ flex: 1, marginTop: 50 }}>
       <ScreenHeader>{header}</ScreenHeader>
       {content}
     </View>
