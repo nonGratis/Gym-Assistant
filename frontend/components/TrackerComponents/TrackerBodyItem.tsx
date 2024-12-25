@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 10,
     backgroundColor: Colors.default.background,
-    padding: 20,
+    padding: 15,
     marginVertical: 6,
     marginHorizontal: 16,
     borderRadius: 15,
@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
     color: Colors.default.textLight,
     flex: 1,
     textAlign: "center",
+    fontWeight: "bold",
   },
 });
